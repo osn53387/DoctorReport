@@ -4,6 +4,7 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Internet DLs/DoctorReport/app/src/main/res/layout/activity_main.xml" value="0.5" />
+        <entry key="..\:/Internet DLs/DoctorReport/app/src/main/res/layout/data_sync.xml" value="0.5" />
       </map>
     </option>
   </component>
@@ -12,5 +13,12 @@
   </component>
   <component name="ProjectType">
     <option name="id" value="Android" />
+  </component>
+  <component name="VisualizationToolProject">
+    <option name="state">
+      <ProjectState>
+        <option name="scale" value="0.18697916666666667" />
+      </ProjectState>
+    </option>
   </component>
 </project>
