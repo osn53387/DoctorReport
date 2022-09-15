@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "709896920864",
+    "project_id": "doctorreport-d864f",
+    "storage_bucket": "doctorreport-d864f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:709896920864:android:3122c928694bfdc3584145",
+        "android_client_info": {
+          "package_name": "com.example.doctorreport"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "709896920864-nihm4atmd1as75ibrf8j637nmdkrok8r.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBiQDPJOClVzf146mGplAO_jA9cpjfnT_Q"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "709896920864-nihm4atmd1as75ibrf8j637nmdkrok8r.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
