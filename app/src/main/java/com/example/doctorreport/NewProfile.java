@@ -2,11 +2,9 @@ package com.example.doctorreport;
 
 public class NewProfile {
 
-    String ign;
     int lmd, orundum;
 
-    public NewProfile(String ign, int lmd, int orundum) {
-            ign = this.ign;
+    public NewProfile(int lmd, int orundum) {
             lmd = this.lmd;
             orundum = this.orundum;
     }

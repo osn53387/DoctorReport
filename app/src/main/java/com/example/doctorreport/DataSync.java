@@ -16,7 +16,7 @@ public class DataSync extends AppCompatActivity {
     DatabaseReference reference;
     FirebaseDatabase rootNode;
 
-    Button newUser;
+    Button newUser, returningUser;
 
     EditText ign, lmd, orundum;
 
@@ -28,6 +28,7 @@ public class DataSync extends AppCompatActivity {
         setContentView(R.layout.data_sync);
 
         newUser = findViewById(R.id.CreateNewProfile);
+        returningUser = findViewById(R.id.SyncOldUser);
 
         ign = findViewById(R.id.InputIGNText);
         lmd = findViewById(R.id.LMDinput);
@@ -37,16 +38,24 @@ public class DataSync extends AppCompatActivity {
         parsedOrundum = Integer.parseInt((orundum.getText().toString().trim()));
 
         createUserProfile();
+        syncReturningUser();
     }
 
     private void createUserProfile() {
-        NewProfile newuser = new NewProfile(ign.getText().toString(), parsedLmd, parsedOrundum);
+        NewProfile newuser = new NewProfile(parsedLmd, parsedOrundum);
         newUser.setMovementMethod(LinkMovementMethod.getInstance());
         newUser.setOnClickListener(view -> {
         rootNode = FirebaseDatabase.getInstance();
-        reference = rootNode.getReference("Users");
+        reference = rootNode.getReference("Users").child(ign.getText().toString());
         reference.setValue(newuser);
         startActivity(new Intent(DataSync.this, MainActivity.class));
+        });
+    }
+
+    private void syncReturningUser() {
+        returningUser.setMovementMethod(LinkMovementMethod.getInstance());
+        returningUser.setOnClickListener(view -> {
+            startActivity(new Intent(DataSync.this, Popup.class));
         });
     }
 
