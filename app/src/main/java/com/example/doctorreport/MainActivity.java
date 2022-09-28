@@ -14,7 +14,7 @@ import java.util.Date;
 
 public class MainActivity extends AppCompatActivity {
 
-    Button syncButton;
+    Button syncButton, lmdButton, rockButton;
 
     TextView time;
 
@@ -24,16 +24,18 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         syncButton = findViewById(R.id.SyncButton);
+        lmdButton = findViewById(R.id.LMDGrindtime);
+        rockButton = findViewById(R.id.OneDashSeven);
         time = findViewById(R.id.Time);
 
         toSyncingPage();
         updateRealTime();
+        lmdGrindTime();
     }
 
     private void toSyncingPage() {
-        syncButton.setMovementMethod(LinkMovementMethod.getInstance());
         syncButton.setOnClickListener(view -> {
-            startActivity(new Intent(MainActivity.this, DataSync.class));
+            startActivity(new Intent(this, DataSync.class));
             finish();
         });
     }
@@ -48,4 +50,15 @@ public class MainActivity extends AppCompatActivity {
         }, 1000); // here 1 seconds to refresh time after 1 seconds
     }
 
+    private void lmdGrindTime() {
+        lmdButton.setOnClickListener(view -> {
+            startActivity(new Intent(this, RunCounter.class));
+        });
+    }
+
+    private void oneDashSevenTime() {
+        rockButton.setOnClickListener(view -> {
+            startActivity(new Intent(this, RunCounter.class));
+        });
+    }
 }

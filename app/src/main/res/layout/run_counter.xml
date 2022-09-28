@@ -36,22 +36,28 @@
         app:layout_constraintTop_toBottomOf="@+id/HowMuch">
 
         <Button
+            android:id="@+id/DecreaseRun"
             android:layout_width="40dp"
             android:layout_height="match_parent"
-            android:text="-" />
+            android:text="-"
+            tools:ignore="TouchTargetSizeCheck" />
 
         <EditText
+            android:id="@+id/RunAmount"
             android:layout_width="53dp"
             android:layout_height="match_parent"
             android:layout_centerInParent="true"
             android:text="0"
-            android:textAlignment="center" />
+            android:textAlignment="center"
+            tools:ignore="TouchTargetSizeCheck" />
 
         <Button
+            android:id="@+id/IncreaseRun"
             android:layout_width="40dp"
             android:layout_height="match_parent"
             android:layout_alignParentRight="true"
-            android:text="+" />
+            android:text="+"
+            tools:ignore="TouchTargetSizeCheck" />
 
     </RelativeLayout>
 
